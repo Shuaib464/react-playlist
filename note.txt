@@ -1,3 +1,11 @@
+# For creating react-app by vite; run command 
+        npm create vite@latest
+
+  after this, installing required node modules; run command
+        npm install / npm i
+
+
+
 06 Virtual DOM
 
 1- createRoot() --> behind the scenes hamare liye DOM like structure create karta hai,
