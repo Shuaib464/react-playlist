@@ -17,6 +17,6 @@ export default function Protected({children, authentication = true}) {
         setLoader(false)
     }, [authStatus, navigate, authentication])
   return (
-    <div>AuthLayout</div>
+    <div>{children}</div>
   )
 }
