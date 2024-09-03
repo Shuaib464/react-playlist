@@ -36,17 +36,28 @@ export class AuthService{
 
     async getCurrentUser() {
         try {
-            return await this.account.get();
+            let result = await this.account.get();
+            console.log(result);
+            return result
         } catch (error) {
             console.log("Appwrite service :: getCurrentUser error ", error);
-        }
+        } 
 
         return null;
     }  
 
+    // isAuthenticated() {
+    //     const userSession  = localStorage.getItem('appwriteSession');
+    //     if(userSession) 
+    //         return true
+
+    //     return false;
+    // }
+
     async logout() {
         try {
             // await this.account.deleteSession('current');        //deleting current seesion
+            console.log('in logout func....');
             await this.account.deleteSessions();        // deleting all sessions of user
         } catch (error) {
             console.log("Appwrite service :: logout :: error", error);
