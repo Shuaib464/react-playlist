@@ -6,14 +6,14 @@ import store from './store/store.js'
 import { Provider } from 'react-redux'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Home from './pages/Home.jsx'
-import { AuthLayout, Login } from './components/index.js'
+import { AuthLayout } from './components/index.js'
 
+import Login from './pages/Login.jsx'
 import Signup from './pages/Signup.jsx'
 import AllPosts from './pages/AllPosts.jsx'
 import AddPost from './pages/AddPost.jsx'
 import Post from './pages/Post.jsx'
-import Test from './pages/Test.jsx'
-
+import EditPost from './pages/EditPost.jsx'
 const router = createBrowserRouter([
   {
     path: '/',
@@ -62,7 +62,7 @@ const router = createBrowserRouter([
         element: (
           <AuthLayout authentication>
             {" "}
-            {/* <Editpo */}
+            <EditPost />
           </AuthLayout>
         )
       },
